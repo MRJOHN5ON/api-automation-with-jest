@@ -1,4 +1,9 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-    API_URL: "paste_your_api_url_here"
+    API_URL: "https://cnt-60063e12-99a3-4e3f-8904-3465399b7eb9.containerhub.tripleten-services.com",
+    GET_ENDPOINT: "/api/db/resources/kit_model.csv",
+    POST_ENDPOINT: "/fast-delivery/v3.1.1/calculate-delivery.xml",
+    PUT_ENDPOINT:"/api/v1/products/5",
+    PUT_ENDPOINT2: "/api/v1/products/93",
+    DELETE_ENDPOINT: "/api/v1/kits/2"
 }
