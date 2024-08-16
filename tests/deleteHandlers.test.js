@@ -16,7 +16,7 @@ test('Code 200', async () => {
 
 //TEST 2: to ensure the response body contains information expected from the api docs
 test(`accurate response body`, async () => {
-	let actualResponse;
+	let actualBody;
 	try {
 		const response = await fetch(`${config.API_URL}${config.DELETE_ENDPOINT}`,{
 			method: 'DELETE',
