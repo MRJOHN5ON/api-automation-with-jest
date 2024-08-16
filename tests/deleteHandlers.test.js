@@ -8,10 +8,11 @@ test('Code 200', async () => {
 		const response = await fetch(`${config.API_URL}${config.DELETE_ENDPOINT}`, {
 			method: 'DELETE',
 		});
-		actualResponse = await response.status //get the actual response code
+		actualResponse = response.status //get the actual response code
 	} catch (error) {
 		console.error(error);
 	}
+	expect(actualResponse).toBe(200);
 });
 
 //TEST 2: to ensure the response body contains information expected from the api docs
