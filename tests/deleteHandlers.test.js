@@ -2,7 +2,7 @@
 const config = require('../config');
 
 // Test 1 - To verify HTTP code 200 when deleting a kit
-test('Code 200', async () => {
+test('should expect status code 200', async () => {
 	let actualResponse;
     try {
 		const response = await fetch(`${config.API_URL}${config.DELETE_ENDPOINT}`, {
@@ -16,7 +16,7 @@ test('Code 200', async () => {
 });
 
 //TEST 2: to ensure the response body contains information expected from the api docs
-test(`accurate response body`, async () => {
+test(`should expect response body to return true value`, async () => {
 	let actualBody;
 	try {
 		const response = await fetch(`${config.API_URL}${config.DELETE_ENDPOINT}`,{
