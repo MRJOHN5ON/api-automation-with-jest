@@ -14,7 +14,7 @@ const time = 22; // Specific time to test for test 3
 
 //TEST 1: to check the http status will be 200
 
-test('status code is 200', async () => {
+test('Should return HTTP status code 200', async () => {
 	let actualResponse;
 	try {
 		const response = await fetch(`${config.API_URL}${config.POST_ENDPOINT}`, {
@@ -33,7 +33,7 @@ test('status code is 200', async () => {
 
 //TEST 2: to ensure the response body contains information expected from the api docs
 
-test('Response Body Returns Accurate Info', async () => {
+test('Should return response body containing "Fast Delivery"', async () => {
 	let actualBody;
 	try {
 		const response = await fetch(`${config.API_URL}${config.POST_ENDPOINT}`, {
@@ -51,7 +51,7 @@ test('Response Body Returns Accurate Info', async () => {
 });
 
 //Test 3
-// According to previous requirements response body should contain isItPossibleToDeliver="false for times 
+// response body should contain isItPossibleToDeliver="false for times 
 // outside of 07-21.. therefore this test to check the time of 22
 test('Check Response for Delivery Time 22', async () => {
 

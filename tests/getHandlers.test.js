@@ -2,7 +2,7 @@
 const config = require('../config');
 
 //first test: checking if database returns with http code 200
-test('Database Code 200', async () => {
+test('Should return HTTP status code 200', async () => {
 	let actualResponse;
 	try {
 		const response = await fetch(`${config.API_URL}${config.GET_ENDPOINT}`);
@@ -14,7 +14,7 @@ test('Database Code 200', async () => {
 });
 
 // second test to ensure response body gives database info
-test('accurate response body', async () => {
+test('Should return a response body, "productsList"', async () => {
 	let actualBody;
 	try {
 		const response = await fetch(`${config.API_URL}${config.GET_ENDPOINT}`);
